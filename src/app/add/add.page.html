@@ -1,0 +1,23 @@
+<ion-content >
+    <ion-header>
+        <ion-toolbar>
+          <ion-title> 
+            เพิ่มรายการ
+          </ion-title>
+        </ion-toolbar>
+        </ion-header>  
+        <br>        
+  <form novalidate #myForm="ngForm" (ngSubmit)="insert(myForm.value)">
+    <div padding> 
+      <label>ชื่อรายการ</label>
+      <ion-input type="text" ngModel name="his_name" placeholder="กรุณากรอกชื่อรายการ"></ion-input>
+    </div>   
+    <div padding>
+        <label>ราคา</label>
+        <ion-input  type="text" ngModel name="his_pirce" placeholder="กรุณากรอกราคา"></ion-input>
+      </div>  
+<div class="center">
+  <ion-button type="submit" color="success"><ion-icon name="done-all"></ion-icon></ion-button>
+</div>
+</form>
+</ion-content>

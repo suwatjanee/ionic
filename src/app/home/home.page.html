@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-grid>
+<ion-row>
+    <ion-col size="6" >
+        รายการ รายรับ-รายจ่าย 
+    </ion-col>
+    <ion-col size="6">
+        <ion-button color="success" float-right (click)="adddata()" expand="full"> <ion-icon name="add-circle-outline"></ion-icon></ion-button>
+    </ion-col>
+</ion-row>
+      </ion-grid>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor = "let item of dataList"> <!--วนลูปค่าที่จะโชว์-->  
+    <ion-card-content>
+      {{item.his_name}} 
+      <br>
+     ราคา : {{item.his_pirce}}
+     <ion-grid>
+     <ion-row>  
+     <ion-col size="6">
+        <ion-button color="warning" (click)="editdata(item.his_id)" expand="full"><ion-icon name="pricetag"></ion-icon></ion-button>  
+        </ion-col>
+          <ion-col size="6">
+          <ion-button color="danger" (click)="deletedata(item.his_id)" expand="full"><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </ion-card-content>
+
+
+
+  </ion-card>
+</ion-content>
